@@ -37,6 +37,20 @@ jobs:
           echo "Do something"
 ```
 
+## Inputs
+
+- `paths` (string)
+
+  A list of path patterns to match against changed files in the `.gitignore` syntax.
+
+  Matching is performed using the [ignore](https://github.com/kaelzhang/node-ignore#readme) library.
+
+- `token` (string)
+
+  The GitHub token to use for fetching the list of changed files.
+
+  Default: `${{ github.token }}`
+
 ## Outputs
 
 - `changed_files`
