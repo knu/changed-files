@@ -3,6 +3,10 @@ name: "List Changed Files"
 description: |
   Get a list of changed files and filter them by a list of path patterns similar to .gitignore
 
+branding:
+  icon: list
+  color: purple
+
 inputs:
   paths:
     type: string
