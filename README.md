@@ -18,7 +18,7 @@ jobs:
         name: Check changed files
         uses: knu/changed-files@v1
         with:
-          paths: |-
+          paths: |
             **/*.{json,js,ts,[cm]js}
             !**/*.d.ts
       - name: Show changed files
