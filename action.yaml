@@ -41,6 +41,7 @@ runs:
       run: |
         EOS=$(openssl rand -hex 64)
         {
+          set -x
           echo "changed_file_list<<$EOS"
           if [ "${{github.event_name}}" = "pull_request" ]; then
             gh api 'repos/${{github.event.pull_request.base.repo.full_name}}/compare/${{github.event.pull_request.base.sha}}...${{github.event.pull_request.head.label}}' --jq '.files[].filename'
